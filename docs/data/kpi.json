@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T08:51:53Z",
+  "generated_at": "2026-11-03T09:12:37Z",
   "kpi_label": "% of postings mentioning 'ci/cd'",
   "kpi_value": 0.25,
   "n_postings_analyzed": 12,
@@ -46,5 +46,10 @@
       "count": 1
     }
   ],
-  "avg_skills_per_posting": 7.33
+  "avg_skills_per_posting": 7.33,
+  "cloud_kpi": {
+    "kpi_label": "% of postings mentioning any cloud provider (AWS, Azure, GCP)",
+    "kpi_value": 0.167,
+    "n_matching": 2
+  }
 }

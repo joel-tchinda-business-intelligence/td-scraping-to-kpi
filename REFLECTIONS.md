@@ -24,7 +24,14 @@ Résultats : Python est cité dans 8 % des offres (1 sur 12) et CI/CD dans 25 % 
 Je ne ferais confiance à aucun des deux pour prendre une vraie décision. En relisant les offres, j'ai vu que Python est en fait demandé dans 8 offres sur 12, mais le script ne lit que les 1 500 premiers caractères, souvent consacrés à la présentation de l'entreprise, donc le KPI Python est très sous-estimé. En plus, 12 offres prises au hasard sur Indeed, c'est trop peu et pas forcément représentatif des postes visés par les étudiants de l'ENSIM. Le KPI CI/CD paraît meilleur seulement parce que cette compétence apparaissait plus tôt dans le texte, pas parce qu'elle est vraiment plus demandée que Python.
 
 ## 7. Ce qu'on peut ou non reconstruire à partir de kpi.json
+À partir de kpi.json seul, on ne peut pas retrouver les offres ni les entreprises. il ne contient qu'un pourcentage, des totaux et une liste de compétences avec leur nombre. C'est un choix voulu, le titre et l'entreprise existent dans extracted.json, mais la fonction compute_kpi() ne les recopie jamais dans le résultat, elle ne garde que des comptages.
+
+Par contre, ce n'est pas un anonymat parfait. Avec seulement 12 offres, certaines compétences très précises du top 10, comme "360° video" ou "HIL test benches", correspondent à une seule annonce et peuvent donner un indice sur le type d'entreprise qui l'a publiée. Avec plus d'offres, ou en ne publiant que les compétences citées au moins 2 ou 3 fois, ce risque serait plus faible.
 
 ## 8. À qui s'adresse vraiment ce dashboard
+En l'état, la page s'adresse surtout à moi ou au professeur : le titre « Scraping to KPI lab » et la phrase qui renvoie vers extracted.json et compute_kpi.py parlent de la méthode, pas d'une décision. Un membre du comité pédagogique ne saurait pas quoi en conclure, et il ne pourrait même pas ouvrir extracted.json puisque ce fichier n'est pas publié. Je changerais la description en : « Part des offres d'emploi d'ingénieur qui demandent des compétences CI/CD, pour aider l'ENSIM à décider quoi renforcer dans ses cours - échantillon de 12 offres »
 
 ## 9. Mon deuxième KPI, et lequel je trouve le plus fiable
+Mon deuxième KPI mesure la part des offres qui citent au moins un fournisseur cloud (AWS, Azure ou Google Cloud) : 17 % (2 offres sur 12), contre 25 % pour CI/CD.
+
+Je ferais un peu plus confiance au KPI cloud pour une décision, parce qu'il regroupe plusieurs mots-clés : il dépend moins de la façon exacte dont le modèle écrit une compétence, et il répond à une question plus utile pour l'école (« faut-il enseigner le cloud ? ») plutôt qu'à un seul outil. Mais les deux restent fragiles; seulement 12 offres, et le script ne lit que les 1 500 premiers caractères, donc il rate des mentions. il faudrait analyser le texte complet de beaucoup plus d'offres.
