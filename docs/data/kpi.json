@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-11-03T08:51:53Z",
+  "kpi_label": "% of postings mentioning 'ci/cd'",
+  "kpi_value": 0.25,
+  "n_postings_analyzed": 12,
+  "n_matching": 3,
+  "top_skills": [
+    {
+      "skill": "AI",
+      "count": 3
+    },
+    {
+      "skill": "Computer vision",
+      "count": 2
+    },
+    {
+      "skill": "Generative AI",
+      "count": 2
+    },
+    {
+      "skill": "360\u00b0 video",
+      "count": 2
+    },
+    {
+      "skill": "SaaS",
+      "count": 2
+    },
+    {
+      "skill": "Software engineering",
+      "count": 2
+    },
+    {
+      "skill": "Product management",
+      "count": 2
+    },
+    {
+      "skill": "automation",
+      "count": 2
+    },
+    {
+      "skill": "Image technology",
+      "count": 1
+    },
+    {
+      "skill": "HIL test benches",
+      "count": 1
+    }
+  ],
+  "avg_skills_per_posting": 7.33
+}
